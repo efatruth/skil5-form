@@ -10,9 +10,6 @@ from bottle import run, route, static_file, error, request, default_app, get, re
 import time
 import html
 
-from bottle import *
-
-
 @route("/")
 def index():
     return template('index', err=0)
