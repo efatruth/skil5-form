@@ -12,7 +12,6 @@ import html
 
 from bottle import *
 
-bottle.debug(True)
 
 @route("/")
 def index():
