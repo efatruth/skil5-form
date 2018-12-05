@@ -10,6 +10,10 @@ from bottle import run, route, static_file, error, request, default_app, get, re
 import time
 import html
 
+from bottle import *
+
+bottle.debug(True)
+
 @route("/")
 def index():
     return template('index', err=0)
@@ -42,4 +46,4 @@ def sida2():
 
     return template('submit', nafn=nafn, heim=heim, email=email, simi=simi, nam=nam, timi=timi, dagar=dagar)
 
-run(host='localhost',port=8080,debug=True,reloader=True)
+bottle.run(host='0.0.0.0', port=argv[1])
