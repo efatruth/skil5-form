@@ -1,14 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+import bottle
+from bottle import run, route, static_file, error, request, default_app, get, response, template, redirect
+import datetime
+
 import os
 from os import environ as env
 from sys import argv
 
-import bottle
-from bottle import run, route, static_file, error, request, default_app, get, response, template, redirect
-import time
-import html
+
+bottle.debug(True)
 
 @route("/")
 def index():
